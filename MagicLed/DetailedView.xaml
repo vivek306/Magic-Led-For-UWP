@@ -1,0 +1,34 @@
+﻿<Page
+    x:Class="MagicLed.DetailedView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MagicLed"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <ScrollViewer>
+            <StackPanel Margin="20">
+                <TextBlock x:Name="IPAddressText"></TextBlock>
+                <ToggleSwitch x:Name="isBulbOn" IsOn="False" Toggled="isBulbOn_Toggled"></ToggleSwitch>
+                <ColorPicker x:Name="myColorPicker" ColorSpectrumShape="Ring" ColorChanged="myColorPicker_ColorChanged"/>
+            </StackPanel>
+            
+        </ScrollViewer>
+        
+        <CommandBar Grid.Row="1">
+            <AppBarButton Icon="Back" Label="Back" Click="BackButton_Click"/>
+            <AppBarButton Icon="Refresh" Label="Refresh" Click="Refresh_Click"/>
+            
+            <CommandBar.Content>
+                <TextBlock x:Name="StatusText" Text="Ready" Margin="12,14"/>
+            </CommandBar.Content>
+        </CommandBar>
+    </Grid>
+</Page>
