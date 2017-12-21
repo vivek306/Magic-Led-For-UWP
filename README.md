@@ -1,4 +1,4 @@
-# Magic-Led-For-UWP
+# Magic Led For UWP
 Magic Led For UWP
 
 View all the LEDs on the Network
